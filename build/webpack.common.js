@@ -15,7 +15,7 @@ const output = {
 
 
 const resolve = {
-  extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', ],
+  extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.html', ],
 };
 
 const modules = {
@@ -28,6 +28,12 @@ const modules = {
         appendTsSuffixTo: [/\.vue$/],
       },
     },
+    {
+      test: /\.(html)$/,
+      use: {
+        loader: 'html-loader',
+      }
+    }
   ],
 };
 

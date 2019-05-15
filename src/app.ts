@@ -1,20 +1,28 @@
 import ng1 from 'angular';
+import angularModules from './modules';
 
 export class AngularApp {
     ng1App?: angular.IModule;
 
+    ngModuleDependencies: any[];
+
     constructor() {
-        this.ng1App = ng1.module('app', []);
-        ng1.bootstrap(document, ['app']);
+        this.ngModuleDependencies = [];
     }
 
-    getApp(): angular.IModule{
-        return this.ng1App;
+    useModule(m: angular.IModule) {
+        this.ngModuleDependencies.push(m.name);
+
+        return m;
+    }
+
+    init():void {
+        for(const m of angularModules) {
+            this.useModule(m);
+        }
+
+        ng1.bootstrap(document, this.ngModuleDependencies);
     }
 }
 
-const App: AngularApp = new AngularApp();
-
-export const coreModule: angular.IModule = App.getApp();
-
-export default App;
+export default new AngularApp();
