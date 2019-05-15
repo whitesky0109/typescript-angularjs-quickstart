@@ -9,7 +9,7 @@ const entry = {
 
 const output = {
   path: path.resolve(__dirname, '../dist'),
-  filename: 'app.js',
+  filename: '[name].js',
   publicPath: '/',
 };
 
@@ -24,9 +24,6 @@ const modules = {
       test: /\.tsx?$/,
       loader: 'ts-loader',
       exclude: /node_modules/,
-      options: {
-        appendTsSuffixTo: [/\.vue$/],
-      },
     },
     {
       test: /\.(html)$/,

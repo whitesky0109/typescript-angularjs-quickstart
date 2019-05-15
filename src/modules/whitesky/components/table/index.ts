@@ -4,7 +4,8 @@ import coreModule from '../../module';
 export class TableCtrl implements angular.IComponentController {
 
     /** @ngInject */
-    constructor() {
+    constructor($scope: angular.IScope) {
+        console.log($scope);
     }
 }
 

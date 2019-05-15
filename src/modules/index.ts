@@ -1,6 +1,8 @@
 import whiteskyModule from './whitesky';
 
 // legacy modules
-export default [
+const modules: angular.IModule[] = [
     whiteskyModule,
 ];
+
+export default modules;
