@@ -13,7 +13,6 @@ export class TableComponent implements angular.IComponentOptions {
     template = require('./index.html');
     controller = TableCtrl;
 
-    /** @ngInject */
     constructor() {
     }
 }

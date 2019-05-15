@@ -10,7 +10,7 @@ const entry = {
 const output = {
   path: path.resolve(__dirname, '../dist'),
   filename: '[name].js',
-  publicPath: '/',
+  publicPath: './',
 };
 
 

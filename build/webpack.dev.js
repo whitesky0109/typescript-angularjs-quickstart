@@ -7,6 +7,7 @@ const devServer = {
   contentBase: path.join(__dirname, '../dist'),
   host: 'localhost',
   port: 3333,
+  publicPath: "/",
 };
 
 const WebpackConfig = {
