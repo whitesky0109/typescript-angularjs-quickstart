@@ -1,0 +1,39 @@
+{
+  "name": "angularjs-simple-quickstart",
+  "version": "1.0.0",
+  "description": "AngularJs 예제 프로그램",
+  "main": "src/index.ts",
+  "scripts": {
+    "watch": "webpack-dev-server --config build/webpack.dev.js",
+    "build": "webpack -p --progress --config build/webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitesky0109/angularjs-simple-quickstart.git"
+  },
+  "keywords": [
+    "angularjs",
+    "typescript",
+    "webpack"
+  ],
+  "author": "whitesky0109",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whitesky0109/angularjs-simple-quickstart/issues"
+  },
+  "homepage": "https://github.com/whitesky0109/angularjs-simple-quickstart#readme",
+  "devDependencies": {
+    "@types/angular": "^1.6.54",
+    "clean-webpack-plugin": "^2.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^6.0.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-merge": "^4.2.1",
+    "yarn": "^1.16.0"
+  },
+  "dependencies": {
+    "angular": "^1.7.8"
+  }
+}
